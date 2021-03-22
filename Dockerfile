@@ -6,7 +6,7 @@
 #    By: nle-biha <nle-biha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/19 22:35:04 by nle-biha          #+#    #+#              #
-#    Updated: 2021/03/22 19:29:23 by nle-biha         ###   ########.fr        #
+#    Updated: 2021/03/22 20:18:03 by nle-biha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,6 @@ RUN mkdir -p /etc/nginx/ssl
 COPY ./srcs/localhostoff /tmp
 COPY ./srcs/cmd.sh /home/srcs
 COPY ./srcs/localhost /etc/nginx/sites-available/
-COPY ./srcs/info.php /var/www/localhost
 COPY ./srcs/wp-config.php /var/www/localhost
 COPY ./srcs/config.inc.php /var/www/localhost
 RUN openssl req -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -keyout /etc/nginx/ssl/localhost.key -out  /etc/nginx/ssl/localhost.pem -subj "/C=FR/ST=Paris/L=Paris/O=42/OU=lebibi/CN=localhost"
