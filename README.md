@@ -1,9 +1,12 @@
-# ft_server
+## ft_server
 
+
+#Build :
 ```bash
  docker build -t name . 
  ```
  
+ #Run :
  ```bash
  docker run  -ti -p 8080:80 -p 443:443 name 
  ```
@@ -20,7 +23,7 @@
  ```bash
  docker run --env AUTOINDEX=0 -d --rm -ti -p 8080:80 -p 443:443 name   
 ```
-
+#In browser
 ```bash
 https://localhost/
 ```
